@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Marketplace</title>
+    {% load static %}
+    <link rel="stylesheet" type = "text/css"  href = "{% static 'css/home.css' %}">
+</head>
+<body>
+    <!--  Side bars and logo  -->
+    <div class="header">
+        <div class = "topNavbar">
+            <div class = "logo">
+                <img src = "{% static 'images/logo.png' %}" width = "120">
+            </div>
+            <nav class = "topNav">
+                <ul>
+                    <li><input size = "60" type="text" placeholder="Search..."></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Sign Up</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </div>
+    <!--  Latest Added Products  -->
+    <div class="categories">
+        <div class="smallContainer">
+            <div  class="leftNavBar">
+                <nav class = "leftNav">
+                    <ul class = "leftUL">
+                        <li><a>Categories</a></li>
+                        <li><a href="">Home Technics ></a></li>
+                        <li><a href="">Electronics ></a></li>
+                        <li><a href="">Sports ></a></li>
+                        <li><a href="">Music & Arts ></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </div>
+                <div class="col-3">
+                    <img src = "{% static 'images/tv1.jpg' %}">
+                </div>
+                <div class="col-3">
+                    <img src = "{% static 'images/laptop.jpg' %}">
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!------  Categoris  ------->
+    
+    <div class="categories">
+        <!--  Home Technics  -->
+        <h2 class = "title">Home Technics</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/tv1.jpg' %}">
+                </a>
+                <h4>TV</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Laptop</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <!--  Electronics  -->
+        <h2 class = "title">Electronics</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/tv1.jpg' %}">
+                </a>
+                <h4>TV</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/laptop.jpg' %}">
+                </a>
+                <h4>Laptop</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <!--  Sports  -->
+        <h2 class = "title">Sports</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/tv1.jpg' %}">
+                </a>
+                <h4>TV</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/laptop.jpg' %}">
+                </a>
+                <h4>Laptop</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <!--  Music & Arts  -->
+        <h2 class = "title">Music & Arts</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>TV</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Laptop</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="">
+                    <img src = "{% static 'images/iphone.png' %}">
+                </a>
+                <h4>Iphone</h4>
+                <p>$50.00</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
