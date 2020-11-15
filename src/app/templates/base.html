@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>{%block title%}{% endblock %}</title>
+    <link rel="stylesheet" type = "text/css"  href = "{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--  Side bars and logo  -->
+    <div class="header">
+        <div class = "topNavbar">
+            <div class = "logo">
+                <img src = "{% static 'images/logo.png' %}" width = "120">
+            </div>
+            <nav class = "topNav">
+                <ul>
+                    <li><h1>Marketplace</h1></li>
+                    <li><input size = "60" type="text" placeholder="Search..."></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#ft">About</a></li>
+                    <li><a href="#ft">Contact</a></li>
+                    <li><a href="login/">Login</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </div>
+    {%block content%}
+    {% endblock content%}
+    <!----------------Footer-------------------------->
+<div class="footer" id="ft">
+    <div class="footer-row">
+        <div class="footer-col-1">
+            <h3>About</h3>
+            <p>Marketplace is the website created by BME student,
+                where everyone can buy and sell everything! 
+                Search or post the product you like the most!</p>
+        </div>
+        <div class="footer-col-2">
+            <h3>Contact</h3>
+            <p>Contact information!!!!!!!</p>
+        </div>
+        <div class="footer-col-3">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="">Home Technics</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Sports</a></li>
+                <li><a href="">Music & Arts</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

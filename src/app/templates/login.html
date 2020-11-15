@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}Log in{% endblock title%}
+{%block content%}
+<div class="login-page">
+    <div class="login-form">
+        <h2 class="form-title">Sign In</h2>
+        <form method="POST">
+            <input type="email" name="your-email" id="your-email" placeholder="Your Email"/>
+            <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+            <button>login</button>
+        </form>
+        <div class = "link">       
+            <a href="">Create new account</a>
+        </div>
+    </div>
+    
+</div>
+    
+{% endblock content%}
