@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}Registration{% endblock title%}
+{%block content%}
+<div class="login-page">
+    <div class="login-form">
+        <h2 class="form-title">Registration</h2>
+        <form method="POST">
+            <div class="name">First Name</div>
+            <div class="value">
+                <input type="text" name="firstName" required>
+            </div>
+            <div class="name">Last Name</div>
+            <div class="value">
+                <input type="text" name="lastName" required>
+            </div>
+            <div class="name">Password</div>
+            <div class="value">
+                <input type="password" name="password" required>
+            </div>  
+            <div class="name">Repeat Password</div>
+            <div class="value">
+                <input type="password" name="repeatPassword" required>
+            </div>  
+            <div class="name">Email</div>
+            <div class="value">
+                <input type="email" name="email" required>
+            </div>   
+            <div class="name">Phone Number</div>
+            <div class="value">
+                <input type="number" name="phoneNumber" required>
+            </div>    
+            <div>
+                <button class="link" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content%}
