@@ -5,14 +5,14 @@
 <div class="login-page">
     <div class="login-form">
         <h2 class="form-title">Registration</h2>
-        <form method="POST">
+        <form method="POST" action="./?next={{ redirect_to }}">{% csrf_token %}
             <div class="name">First Name</div>
             <div class="value">
-                <input type="text" name="firstName" required>
+                <input type="text" name="first_name" required>
             </div>
             <div class="name">Last Name</div>
             <div class="value">
-                <input type="text" name="lastName" required>
+                <input type="text" name="last_name" required>
             </div>
             <div class="name">Password</div>
             <div class="value">
@@ -20,7 +20,7 @@
             </div>  
             <div class="name">Repeat Password</div>
             <div class="value">
-                <input type="password" name="repeatPassword" required>
+                <input type="password" name="repeat_password" required>
             </div>  
             <div class="name">Email</div>
             <div class="value">
@@ -28,7 +28,7 @@
             </div>   
             <div class="name">Phone Number</div>
             <div class="value">
-                <input type="number" name="phoneNumber" required>
+                <input type="number" name="phone_number" required>
             </div>    
             <div>
                 <button class="link" type="submit">Register</button>

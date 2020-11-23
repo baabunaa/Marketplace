@@ -11,16 +11,21 @@
     <div class="header">
         <div class = "topNavbar">
             <div class = "logo">
-                <img src = "{% static 'images/logo.png' %}" width = "120">
+                <a href="../"><img src = "{% static 'images/logo.png' %}" width = "120"></a>
             </div>
             <nav class = "topNav">
                 <ul>
-                    <li><h1>Marketplace</h1></li>
+                    <li><a href="../"><h1>Marketplace</h1></a></li>
                     <li><input size = "60" type="text" placeholder="Search..."></li>
                     <li><a href="../">Home</a></li>
                     <li><a href="#ft">About</a></li>
-                    <li><a href="registration/">Contact</a></li>
-                    <li><a href="login/">Login</a></li>
+                    <li><a href="#ft">Contact</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="">Logout</a></li>
+                    {% else %}
+                        <li><a href="users/login"?next={{request.path}}">Login</a></li>
+                    {% endif %}
+                    
                 </ul>
             </nav>            
         </div>

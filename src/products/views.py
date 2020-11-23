@@ -5,10 +5,3 @@ def home_view(request):
     context = {}
     return render(request, "home.html", context)
 
-def log_in_view(request):
-    context = {}
-    return render(request,"login.html", context)
-
-def registration_view(request):
-    context = {}
-    return render(request,"registration.html", context)
