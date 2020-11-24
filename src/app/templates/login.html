@@ -2,12 +2,12 @@
 {% load static %}
 {%block title%}Log in{% endblock title%}
 {%block content%}
+
 <div class="login-page">
     <div class="login-form">
         <h2 class="form-title">Sign In</h2>
         <form method="POST" action="./?next={{ redirect_to }}"> {% csrf_token %}
-            <input type="email" name="email" id="email" placeholder="example@email.com"/>
-            <input type="password" name="pass" id="pass" placeholder="Password"/>
+            {{form.as_p}}
             <button>login</button>
         </form>
         <div class = "link">       

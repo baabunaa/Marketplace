@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import User
+from users.models import UserAccount
 # Create your models here.
 CATEGORIES = [
     ('HT', 'Home Technics'),
@@ -17,7 +17,7 @@ class Post(models.Model):
     date = models.DateField(auto_now_add=True)
     time = models.TimeField(auto_now_add=True)
     picture = models.ImageField(blank = False,null = True)
-    user = models.ForeignKey(User,on_delete = models.CASCADE,related_name='posts')
+    user = models.ForeignKey(UserAccount,on_delete = models.CASCADE,related_name='posts')
 
     class Meta:
         ordering = ['-date', '-time']

@@ -6,30 +6,10 @@
     <div class="login-form">
         <h2 class="form-title">Registration</h2>
         <form method="POST" action="./?next={{ redirect_to }}">{% csrf_token %}
-            <div class="name">First Name</div>
-            <div class="value">
-                <input type="text" name="first_name" required>
-            </div>
-            <div class="name">Last Name</div>
-            <div class="value">
-                <input type="text" name="last_name" required>
-            </div>
-            <div class="name">Password</div>
-            <div class="value">
-                <input type="password" name="password" required>
-            </div>  
-            <div class="name">Repeat Password</div>
-            <div class="value">
-                <input type="password" name="repeat_password" required>
-            </div>  
-            <div class="name">Email</div>
-            <div class="value">
-                <input type="email" name="email" required>
-            </div>   
-            <div class="name">Phone Number</div>
-            <div class="value">
-                <input type="number" name="phone_number" required>
-            </div>    
+            {% for field in form %}
+                <label class="name">{{ field.label }}</label>
+                {{ field }}
+            {% endfor %}
             <div>
                 <button class="link" type="submit">Register</button>
             </div>
