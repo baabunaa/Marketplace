@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* -------Header------*/
+.header{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+/*logo*/
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+/*Top nav bar*/
+.topNav{
+    text-align: right;
+    flex: 1;
+}
+.topNav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+.topNav ul li{
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+    margin-right: 40px;
+}
+.topNav ul li input{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+/* ------Footer------*/
+.footer{
+    background: black;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 20px 0 20px;
+}
+.footer-row{
+    padding-left: 40px;
+    padding-top: 20px; 
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3{
+    display: inline-table;
+    width: 250px;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-left: 5%;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-3{
+    flex-basis: 24%;
+}
+ul{
+    list-style-type: none;
+}
+.footer a{
+    color: #8a8a8a;
+}
+/* -------Small Container------*/
+.categories{
+    max-width: 1500px;
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.smallContainer{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.leftNavBar{
+    display: inline-block;
+    width: 160px; /* Set the width of the sidebar */
+    z-index: 2; /* Stay on top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+.leftNav{
+    flex: 1;
+    text-align: left;
+}
+.leftNav ul li{
+    padding-top: 10px;
+}
+.leftNav a:hover{
+    font-weight: bold;
+    font-size: 20px;
+}
+.row{
+    display: inline-block;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+.col-3{
+    display: inline-block;
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 325px;
+    height: 250px;
+}
+/* ------Each Category rows------*/
+.col-4{
+    display: inline-block;
+    flex-basis: 25%;
+    padding: 10px;
+    padding-top: 30px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+.col-4 img{
+    width: 300px;
+    height: 250px;
+}
+.col-4 h4{
+    text-align: center;
+}
+.col-4 p{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 10px;
+    position: relative;
+    padding-top: 20px;
+    line-height: 10px;
+    color: rgb(70, 65, 65);
+}
+.title::after{
+    content: '';
+    background: crimson;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+/*-------Log in---------*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.login-form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.login-form h2{
+    margin-bottom: 10px;
+}
+.login-form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.login-form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: rgb(221, 85, 44);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.login-form button:hover,.form button:active,.form button:focus {
+    background: red;
+}
+.link{
+    padding-top: 20px;
+}
+.link a{
+    color: gray;
+}
+.link a:hover{
+    color: red;
+}
+
+ /*-------Registration---------*/
+ input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
