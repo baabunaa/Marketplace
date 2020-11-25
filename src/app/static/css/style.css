@@ -110,14 +110,14 @@ ul{
     z-index: 2; /* Stay on top */
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
 }
 .leftNav{
     flex: 1;
     text-align: left;
+    padding-bottom: 90px;
 }
 .leftNav ul li{
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .leftNav a:hover{
     font-weight: bold;

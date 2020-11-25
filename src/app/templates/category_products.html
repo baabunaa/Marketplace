@@ -2,10 +2,22 @@
 {% load static %}
 {%block title%}{{title}}{% endblock title%}
 {%block content%}
-
 <div class="categories">
-    <!--  Music & Arts  -->
-    <h2 class = "title">{{title}}</h2>
+    <div class="smallContainer">
+        <h2 class = "title">{{title}}</h2>
+        {% include 'left_nav_bar_categories.html' %}
+        <div class="row">
+            {% for product in last_three %}
+            <div class="col-3">
+                <a href="">
+                    <img src = "{{product.picture.url}}">
+                </a>
+                <h4>{{product.name}}</h4>
+                <p>${{product.price}}</p>
+            </div>   
+            {%endfor%}
+        </div>
+    </div> 
     <div class="row">
         {% for product in all_products %}
         <div class="col-4">

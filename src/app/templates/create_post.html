@@ -5,7 +5,7 @@
 <div class="post-page">
     <h2 class="title">Create Post</h2>
     <div class="post-form">
-        <form method="POST" action="./?next={{ redirect_to }}">{% csrf_token %}
+        <form method="POST" action="./?next={{ redirect_to }}" enctype="multipart/form-data">{% csrf_token %}
             <div class="post-field">
                 <h3>{{form.name.label}}</h3>
                 {{form.name}}
@@ -22,10 +22,9 @@
                 {{form.description}}
             </div>
             <div class="post-field">
-                {{form.image}}
+                <input type="file" id="img" name="image" accept="image/*">
             </div>
             <button class="post-button" type="submit">Post</button>
-
         </form>
     </div>
 </div>
