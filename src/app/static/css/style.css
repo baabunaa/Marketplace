@@ -138,6 +138,12 @@ ul{
     width: 325px;
     height: 250px;
 }
+.col-3 h4{
+    text-align: center;
+}
+.col-3 p{
+    text-align: center;
+}
 /* ------Each Category rows------*/
 .col-4{
     display: inline-block;
@@ -177,6 +183,9 @@ ul{
     transform: translateX(-50%);
 }
 .col-4:hover{
+    transform: translateY(-5px);
+}
+.col-3:hover{
     transform: translateY(-5px);
 }
 
