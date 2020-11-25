@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}{{title}}{% endblock title%}
+{%block content%}
+
+<div class="categories">
+    <!--  Music & Arts  -->
+    <h2 class = "title">{{title}}</h2>
+    <div class="row">
+        {% for product in all_products %}
+        <div class="col-4">
+            <a href="">
+                <img src = "{{product.picture.url}}">
+            </a>
+            <h4>{{product.name}}</h4>
+            <p>{{product.price}}</p>
+        </div>   
+        {%endfor%}        
+    </div>
+</div>
+
+{% endblock content%}

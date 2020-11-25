@@ -16,13 +16,15 @@
             <nav class = "topNav">
                 <ul>
                     <li><a href="/"><h1>Marketplace</h1></a></li>
-                    <li><input size = "60" type="text" placeholder="Search..."></li>
+                    <li><input size = "50" type="text" placeholder="Search..."></li>
                     <li><a href="/">Home</a></li>
                     <li><a href="#ft">About</a></li>
                     <li><a href="#ft">Contact</a></li>
                     {% if user.is_authenticated %}
+                        <li><a href="/">Post</a></li>
                         <li><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
+                        <li><a href="{% url 'login' %}">Post</a></li>
                         <li><a href="{% url 'login' %}">Login</a></li>
                     {% endif %}
                     

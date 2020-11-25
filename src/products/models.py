@@ -10,14 +10,14 @@ CATEGORIES = [
 
 
 class Post(models.Model):
-    name = models.TextField(blank = False,null = False)
-    price = models.FloatField(blank = False,null = False)
-    description = models.TextField(blank = True,null = False)
-    category = models.CharField(max_length = 2,choices = CATEGORIES,blank = False, null = False)
+    name = models.TextField(blank=False, null=False)
+    price = models.FloatField(blank=False, null=False)
+    description = models.TextField(blank=True, null=False)
+    category = models.CharField(max_length=2, choices=CATEGORIES, blank=False, null=False)
     date = models.DateField(auto_now_add=True)
     time = models.TimeField(auto_now_add=True)
-    picture = models.ImageField(blank = False,null = True)
-    user = models.ForeignKey(UserAccount,on_delete = models.CASCADE,related_name='posts')
+    picture = models.ImageField(blank=False, null=True)
+    user = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='posts')
 
     class Meta:
         ordering = ['-date', '-time']

@@ -5,33 +5,18 @@
 <!--  Latest Added Products  -->
 <div class="categories">
     <div class="smallContainer">
-        <div  class="leftNavBar">
-            <nav class = "leftNav">
-                <ul class = "leftUL">
-                    <li><h2>Categories</h2></li>
-                    <li><a href="">Home Technics ></a></li>
-                    <li><a href="">Electronics ></a></li>
-                    <li><a href="">Sports ></a></li>
-                    <li><a href="">Music & Arts ></a></li>
-                </ul>
-            </nav>
-        </div>
+        <h2 class = "title">Latest Products</h2>
+        {% include 'left_nav_bar_categories.html' %}
         <div class="row">
+            {% for product in last_products %}
             <div class="col-3">
                 <a href="">
-                    <img src = "{% static 'images/iphone.png' %}">
+                    <img src = "{{product.picture.url}}">
                 </a>
-            </div>
-            <div class="col-3">
-                <a href="">
-                    <img src = "{% static 'images/tv1.jpg' %}">
-                </a>
-            </div>
-            <div class="col-3">
-                <a href="">
-                    <img src = "{% static 'images/laptop.jpg' %}">
-                </a>
-            </div>
+                <h4>{{product.name}}</h4>
+                <p>${{product.price}}</p>
+            </div>   
+            {%endfor%}
         </div>
     </div> 
 </div>
@@ -41,130 +26,54 @@
     <!--  Home Technics  -->
     <h2 class = "title">Home Technics</h2>
     <div class="row">
+        {% for product in home_products %}
         <div class="col-4">
             <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
+                <img src = "{{product.picture.url}}">
             </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/tv1.jpg' %}">
-            </a>
-            <h4>TV</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
-            </a>
-            <h4>Laptop</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
-            </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
+            <h4>{{product.name}}</h4>
+            <p>${{product.price}}</p>
+        </div>   
+        {%endfor%}
     </div>
     <!--  Electronics  -->
     <h2 class = "title">Electronics</h2>
     <div class="row">
+        {% for product in elec_products %}
         <div class="col-4">
             <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
+                <img src = "{{product.picture.url}}">
             </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/tv1.jpg' %}">
-            </a>
-            <h4>TV</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/laptop.jpg' %}">
-            </a>
-            <h4>Laptop</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
-            </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
+            <h4>{{product.name}}</h4>
+            <p>${{product.price}}</p>
+        </div>   
+        {%endfor%}
     </div>
     <!--  Sports  -->
     <h2 class = "title">Sports</h2>
     <div class="row">
+        {% for product in sport_products %}
         <div class="col-4">
             <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
+                <img src = "{{product.picture.url}}">
             </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/tv1.jpg' %}">
-            </a>
-            <h4>TV</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/laptop.jpg' %}">
-            </a>
-            <h4>Laptop</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
-            </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
+            <h4>{{product.name}}</h4>
+            <p>${{product.price}}</p>
+        </div>   
+        {%endfor%}
     </div>
     <!--  Music & Arts  -->
     <h2 class = "title">Music & Arts</h2>
     <div class="row">
+        {% for product in ma_products %}
         <div class="col-4">
             <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
+                <img src = "{{product.picture.url}}">
             </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/tv1.jpg' %}">
-            </a>
-            <h4>TV</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/laptop.jpg' %}">
-            </a>
-            <h4>Laptop</h4>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <img src = "{% static 'images/iphone.png' %}">
-            </a>
-            <h4>Iphone</h4>
-            <p>$50.00</p>
-        </div>
+            <h4>{{product.name}}</h4>
+            <p>${{product.price}}</p>
+        </div>   
+        {%endfor%}
     </div>
 </div>
 
