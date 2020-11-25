@@ -30,7 +30,6 @@ def registration_view(request):
         last_name = request.POST.get("last_name")
         email = request.POST.get("email")
         if  password == request.POST.get("repeat_password") and form.is_valid():
-            print("valid")
             acc = UserAccount()
             user = User.objects.create_user(username=username,
                                             password=password,
@@ -39,11 +38,8 @@ def registration_view(request):
                                             email=email)
             acc.user = user
             acc.phone_number = request.POST.get("phone_number")
-            acc.picture = request.POST.get("picture")
             acc.save()
             return HttpResponseRedirect(redirect_to)
     form = RegistrationForm()
-    print("inValid")
-
     context = {'form': form}
     return render(request,"registration.html", context)

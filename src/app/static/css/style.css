@@ -260,3 +260,64 @@ ul{
     font-size: 14px;
   }
   
+/*-----*/
+.post-form{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+textarea {
+    width: calc(100% - 6px);
+}
+.post-field {
+    position: relative;
+    margin: 10px 0;
+}
+.post-field input, .item textarea{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 55%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.post-field-price {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post-field-price input {
+    width: 250px;
+    margin-right: 100px;
+}
+.post-field-price select {
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    width: 200px;
+    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+} 
+.post-button{
+    background-color: rgb(221, 85, 44);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.post-button:hover{
+    background: red;
+}
+.post-page{
+    margin: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding-bottom: 15px;
+}

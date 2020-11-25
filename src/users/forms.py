@@ -60,3 +60,4 @@ class RegistrationForm(forms.Form):
                                                 'name' : 'phone_number', 
                                                 'required' : 'True'
                                                 }))
+                                                

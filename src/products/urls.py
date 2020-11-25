@@ -1,12 +1,13 @@
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import home_view, sports_view, music_and_art_view, electronics_view, home_technics_view
+from products import views
 
 urlpatterns = [
-    path('', home_view, name='home'),
-    path('sports/', sports_view, name='sport'),
-    path('music/', music_and_art_view, name='music and art'),
-    path('electronics/', electronics_view, name='electronics'),
-    path('technics/', home_technics_view, name='home technics'),
+    path('', views.home_view, name='home'),
+    path('sports/', views.sports_view, name='sport'),
+    path('music/', views.music_and_art_view, name='music and art'),
+    path('electronics/', views.electronics_view, name='electronics'),
+    path('technics/', views.home_technics_view, name='home technics'),
+    path('post/', views.post_view, name='post')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

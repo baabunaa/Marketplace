@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
+from .forms import PostForm
 # Create your views here.
 def home_view(request):
     sport_products = Post.objects.filter(category='sp')[:4]
@@ -40,3 +41,9 @@ def home_technics_view(request):
     home_products = Post.objects.filter(category='ht')
     context = {'title': 'Home Technichs', 'all_products': home_products}
     return render(request, "category_products.html", context)
+
+
+def post_view(request):
+    form = PostForm()
+    context={'form':form}
+    return render(request,"create_post.html",context)

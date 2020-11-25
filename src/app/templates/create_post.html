@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}{{title}}{% endblock title%}
+{%block content%}
+<div class="post-page">
+    <h2 class="title">Create Post</h2>
+    <div class="post-form">
+        <form method="POST" action="./?next={{ redirect_to }}">{% csrf_token %}
+            <div class="post-field">
+                <h3>{{form.name.label}}</h3>
+                {{form.name}}
+            </div>
+            <div class="post-field">
+                <h3>{{form.price.label}}</h3>
+                <div class="post-field-price">
+                    {{form.price}}
+                    {{form.category}}
+                </div>
+            </div>
+            <div class="post-field">
+                <h3>{{form.description.label}}</h3>
+                {{form.description}}
+            </div>
+            <div class="post-field">
+                {{form.image}}
+            </div>
+            <button class="post-button" type="submit">Post</button>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock content%}
