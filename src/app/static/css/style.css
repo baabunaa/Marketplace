@@ -35,13 +35,13 @@ a{
 .topNav ul li{
     font-family: "Roboto", sans-serif;
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 35px;
 }
 .topNav ul li input{
     font-family: "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
-    width: 100%;
+    width: 90%;
     border: 0;
     margin: 0 0 15px;
     padding: 15px;
@@ -69,7 +69,7 @@ a{
 
 .footer-col-1, .footer-col-2, .footer-col-3{
     display: inline-table;
-    width: 250px;
+    width: 300px;
     margin-bottom: 20px;
     padding-right: 40px;
     padding-left: 40px;
@@ -78,12 +78,16 @@ a{
 .footer-col-1{
     flex-basis: 30%;
 }
+.footer-col-1 h3{
+    text-align: center;
+    padding-right: 20px;
+}
 .footer-col-2{
     flex: 1;
     text-align: center;
 }
 .footer-col-3{
-    flex-basis: 24%;
+    flex-basis: 30%;
 }
 ul{
     list-style-type: none;
@@ -140,6 +144,9 @@ ul{
 }
 .col-3 h4{
     text-align: center;
+}
+.col-3 h2{
+    text-align: top;
 }
 .col-3 p{
     text-align: center;
@@ -260,7 +267,7 @@ ul{
     font-size: 14px;
   }
   
-/*-----*/
+ /*-------Create Post---------*/
 .post-form{
     margin-top: 50px;
     margin-left: 50px;
@@ -320,4 +327,49 @@ textarea {
     box-sizing: border-box;
     max-width: 1300px;
     padding-bottom: 15px;
+}
+ /*-------Product Detail---------*/
+.detail-container{
+    display: flex;
+    margin: 50px;
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding: 15px;
+}
+
+.navbar-container{
+    flex: 1;
+}
+.picture-container{
+    flex: 1;
+}
+.picture-container img{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+}
+.picture-container h4{
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+.picture-container p{
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 30px;
+}
+.description-container{
+    font-family: "Roboto", sans-serif;
+    flex: 2;
+}
+.description-container h1{
+    text-align: center;
+}
+.description-container p{
+    text-align: start;
+}
+.date{
+    margin-top: 100px;
+    text-align: right;
+    color: lightslategrey;
 }

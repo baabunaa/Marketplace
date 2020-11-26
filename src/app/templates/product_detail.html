@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}{{product.name}}{% endblock title%}
+{%block content%}
+<div class="detail-container">
+    <div class="navbar-container">
+        {% include 'left_nav_bar_categories.html' %}
+    </div>
+    <div class="picture-container">
+        <a href="/product/{{product.id}}/">
+            <img src = "{{product.picture.url}}">
+        </a>
+        <h4>{{product.name}}</h4>
+        <p>${{product.price}}</p>
+    </div>
+    <div class="description-container">
+        <h1>Description</h1>
+        <p>{{product.description}}</p>
+        <div class="date">
+            <h5>Posted by {{product.user}} | {{product.date}} {{product.time}}</h6>
+        </div>
+    </div>
+</div>
+{% endblock content%}
