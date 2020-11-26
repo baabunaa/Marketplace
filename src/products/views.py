@@ -72,3 +72,15 @@ def post_view(request):
     context={'form':form}
     return render(request,"create_post.html",context)
     
+
+def product_detail_view(request, product_id):
+    product = Post.objects.get(id=product_id)
+    context = {'product': product}
+    return render(request,"product_detail.html", context)
+
+def search_view(request):
+    keyword = request.GET.get('search', None)
+    last_three = Post.objects.filter(name__contains=keyword)[:3]
+    products = Post.objects.filter(name__contains=keyword)[3:]
+    context = {'title': 'Search', 'all_products': products, 'last_three': last_three}
+    return render(request, "category_products.html", context)

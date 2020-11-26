@@ -15,19 +15,20 @@
             </div>
             <nav class = "topNav">
                 <ul>
-                    <li><a href="/"><h1>Marketplace</h1></a></li>
-                    <li><input size = "50" type="text" placeholder="Search..."></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#ft">About</a></li>
-                    <li><a href="#ft">Contact</a></li>
-                    {% if user.is_authenticated %}
-                        <li><a href="/post/">Post</a></li>
-                        <li><a href="{% url 'logout' %}">Logout</a></li>
-                    {% else %}
-                        <li><a href="{% url 'login' %}">Post</a></li>
-                        <li><a href="{% url 'login' %}">Login</a></li>
-                    {% endif %}
-                    
+                    <form action="{% url 'search' %}" method="get">
+                        <li><a href="/"><h1>Marketplace</h1></a></li>
+                        <li><input size = 50 name="search" type="text" placeholder="Search..."></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#ft">About</a></li>
+                        <li><a href="#ft">Contact</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="/post/">Post</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                        {% else %}
+                            <li><a href="{% url 'login' %}">Post</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                        {% endif %}
+                    </form>
                 </ul>
             </nav>            
         </div>
@@ -45,15 +46,20 @@
         </div>
         <div class="footer-col-2">
             <h3>Contact</h3>
-            <p>Contact information!!!!!!!</p>
+            <ul>
+                <li>Tel: +36 000 0000</li>
+                <li>E-mail: marketplace@gmail.com</li>
+                <li>Twitter: Marketplace</li>
+                <li>Facebook: Marketplace</li>
+            </ul>
         </div>
         <div class="footer-col-3">
             <h3>Categories</h3>
             <ul>
-                <li><a href="">Home Technics</a></li>
-                <li><a href="">Electronics</a></li>
-                <li><a href="">Sports</a></li>
-                <li><a href="">Music & Arts</a></li>
+                <li><a href="/technics/">Home Technics ></a></li>
+                <li><a href="/electronics/">Electronics ></a></li>
+                <li><a href="/sports/">Sports ></a></li>
+                <li><a href="/music/">Music & Arts ></a></li>
             </ul>
         </div>
     </div>
